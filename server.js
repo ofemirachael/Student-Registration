@@ -11,7 +11,7 @@ const stud = require('./router/students.router');
 
 mongoose.connect('127.0.0.1/school_register');
 
-const port = 4070;
+const port = process.env.port;
 
 
 app.use(bodyParser.json());
