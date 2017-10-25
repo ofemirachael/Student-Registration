@@ -7,7 +7,7 @@ const cors = require('cors');
 const ejs = require('ejs');
 const app = express();
 
-const stud = require('./router/students.router');
+const stud = require('./router/s.router');
 
 mongoose.connect('127.0.0.1/school_register');
 
@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 
 app.use(cors({ origin: 'http://localhost:4200' }));
 
-app.use('/api/student', stud);
+app.use('/api/', stud);
 
 app.get('*', function (req, res) {
     res.render('index.html');
